@@ -67,7 +67,17 @@ def enroll():
        return render_template('enroll.html',form=form)  #redirect( url_for('enroll'))
      
 
-
+@app.route('/estella',methods=['GET','POST'])
+def estella():
+       return render_template('estella.html')
+    
+    
+    
+@app.route('/customer',methods=['GET','POST'])
+def customer():
+       return render_template('customer.html')
+    
+    
 if __name__ == '__main__':
     #DEBUG is SET to TRUE. CHANGE FOR PROD
     app.run(port=5000,debug=True)

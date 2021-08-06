@@ -1,0 +1,71 @@
+{% extends 'index.html' %}
+{% block body %}
+<div class="container px-4 py-5">
+    <div class="row">
+        <div class=" col-md-8 col-sm-8">
+          
+          
+          <h3 class="display-4 fw-bold lh-1 mb-3">Telling Our own Stories</h3>
+          {% block post %}
+            <p class=""><h5> MCFSP at KNUST Scholar Commissions a Fashion Training Centre to Train Young Females in Fashion Design</h5></p>
+           <small> <i class="far fa-calendar-alt"></i> Posted: 01 Aug, 2021 09:00am <span class="mx-3"><i class="fas fa-blog"> </i>  Blog Post</span></small>
+            <img src="{{url_for('static',filename='assets/estellacut.jpg')}}"  width="100%" height="225" class=" rounded featurette-image img-fluid mx-auto" alt="featurette">
+            <p style="text-align: justify;">
+              Mastercard Foundation Scholars Program (MCFSP) provides academically talented yet economically disadvantaged young people in Africa with access to quality higher education. The Program offers an opportunity for its scholars to receive holistic training that empowers them to become change leaders. As such, Ms. Estella Obeng, a final year Mastercard Foundation Scholar studying BA Geography and Rural Development at the Kwame Nkrumah University of Science and Technology (KNUST) has commissioned a Fashion Training Centre named; “African Dream School of Fashion” at Manso Agroyesum a community in the Manso Adubia township of the Amansie South District, Ashanti Region.ccording to Ms. Estella Obeng, the Manso Agroyesum community is faced with several challenges including teenage pregnancy.</p>
+              <a target="_blank" href="{{url_for('post1')}}" >Click here to continue read..</a>
+
+
+
+              <hr>
+              <p class=""><h5> Meet the Student Personality of the Month</h5></p>
+           <small> <i class="far fa-calendar-alt"></i> Posted: 01 Aug, 2021 09:00am <span class="mx-3"><i class="fas fa-blog"> </i>  Blog Post</span></small>
+            <img src="{{url_for('static',filename='assets/madam.jpg')}}"  width="100%" height="225" class=" rounded featurette-image img-fluid mx-auto" alt="featurette">
+            <p style="text-align: justify;">
+              Mastercard Foundation Scholars Program (MCFSP) provides academically talented yet economically disadvantaged young people in Africa with access to quality higher education. The Program offers an opportunity for its scholars to receive holistic training that empowers them to become change leaders. As such, Ms. Estella Obeng, a final year Mastercard Foundation Scholar studying BA Geography and Rural Development at the Kwame Nkrumah University of Science and Technology (KNUST) has commissioned a Fashion Training Centre named; “African Dream School of Fashion” at Manso Agroyesum a community in the Manso Adubia township of the Amansie South District, Ashanti Region.ccording to Ms. Estella Obeng, the Manso Agroyesum community is faced with several challenges including teenage pregnancy.</p>
+              <a target="_blank" href="{{url_for('post1')}}" >Click here to continue read..</a>
+
+          
+
+
+
+
+
+
+
+
+
+
+            {% endblock post %}
+        </div>
+        <div class=" col-sm-4 col-md-4">
+            
+           
+            
+                <form class=" mt-5 p-md-5 p-sm-5 border rounded-3 bg-light">
+                    <small style="text-align: center;" class="mx-auto text-muted mb-4">Subscribe to our newsletters and be the first to hear about our Stories and latest designs. </small> <hr class="my-4">
+                  <div class="form-floating  my-3">
+                    <input type="text" class="form-control" id="floatingInput" placeholder="Please enter full name">
+                    <label for="floatingInput">Name</label>
+                  </div>
+                  <div class="form-floating mb-3">
+                    <input type="email" class="form-control" id="floatingPassword" placeholder="name@example.com">
+                    <label for="floatingPassword">Email Address</label>
+                  </div>
+
+                  <button class="w-100 btn btn-lg btn-primary" type="submit">Sign up</button>
+                  <hr class="my-4">
+                  <small class="text-muted">By clicking Sign up, you agree to the terms of use.</small>
+                </form>
+            
+        </div>
+
+    </div>
+
+</div>
+
+
+
+{% endblock %}
+
+
+

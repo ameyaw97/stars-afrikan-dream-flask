@@ -1,0 +1,190 @@
+{% extends 'index.html' %}
+{% import "bootstrap/wtf.html" as wtf %}
+{{ wtf.quick_form(form) }}
+{% block body %}
+
+
+
+
+
+ 
+<div class="container">
+ <h1 style="text-align: center;">Enroll with Us </h1>
+ <main class="border mx-5 p-5">
+
+    <div class="row">
+        <div class="col-4" >
+     {{form.fullname.label }}
+        </div>
+        <div class="col-6">
+            <form method="POST">
+           <div class="form group p-auto">
+             {{ form.hidden_tag() }}
+             {{ form.fullname(class="form-control",placeholder="Enter your number in cm" ,id="newnumber",style="margin-bottom: 10px;")}}
+           </div>
+          
+        
+        </div>
+     </div>
+
+     
+
+
+
+     <div class="row">
+        <div class="col-4" >
+      {{form.gender.label }}
+        </div>
+        <div class="col-6">
+        
+           <div class="form group">
+             {{ form.hidden_tag() }}
+             {{ form.gender(class="form-select",style="margin-bottom: 10px;")}}
+           </div>
+          
+        
+        </div>
+        
+      </div>
+      
+      <div class="row">
+       <div class="col-4" >
+      {{form.age.label }}
+       </div>
+       <div class="col-6">
+       
+          <div class="form group p-auto">
+            {{ form.hidden_tag() }}
+            {% if form.age.errors %}
+                           {{form.age(class="form-control is-invalid")}}
+                         <div class=" invalid-feedback">
+                         {% for error in form.age.errors %}
+                         <span>
+                           {{error}}
+                         </span>
+                         {% endfor %}
+                         </div>
+                         {% else %}
+                         {{ form.age(class="form-control",id="newage",placeholder="Enter your Age",style="margin-bottom: 10px;")}}
+          {% endif %}
+         </div> 
+       </div>
+       
+      </div>
+      <div class="row">
+      <div class="col-4" >
+      {{form.number.label }}
+      </div>
+      <div class="col-6">
+      
+        <div class="form group p-auto">
+          {{ form.hidden_tag() }}
+          {{ form.number(class="form-control",placeholder="Enter your phone number " ,id="newnumber",style="margin-bottom: 10px;")}}
+        </div>
+       
+      
+      </div>
+      </div>
+      <div class="row">
+      <div class="col-4" >
+      {{form.email.label }}
+      </div>
+      <div class="col-6">
+      
+      <div class="form group p-auto">
+        {{ form.hidden_tag() }}
+        {{ form.email(class="form-control", id="newemail",placeholder="Enter your email",style="margin-bottom: 10px;")}}
+      </div>
+      
+      
+      </div>
+      </div>
+      
+      <div class="row">
+      <div class="col-4" >
+      {{form.location.label }}
+      </div>
+      <div class="col-6">
+      
+         <div class="form group p-auto">
+           {{ form.hidden_tag() }}
+           {{ form.location(class="form-control", id="newlication",placeholder="Enter your location",style="margin-bottom: 10px;")}}
+         </div>
+        
+      
+      </div>
+      </div>
+      
+      <div class="row">
+      <div class="col-4" >
+      {{form.digital.label }}
+      </div>
+      <div class="col-6">
+      
+         <div class="form group p-auto">
+           {{ form.hidden_tag() }}
+           {{ form.digital(class="form-control", id="newdigital",placeholder="Enter your digital",style="margin-bottom: 10px;")}}
+         </div>
+        
+      
+      </div>
+      </div>
+      
+      <div class="row">
+      <div class="col-4" >
+      {{form.landmark.label }}
+      </div>
+      <div class="col-6">
+      
+         <div class="form group p-auto">
+           {{ form.hidden_tag() }}
+           {{ form.landmark(class="form-control", id="newlandmark",placeholder="Enter your landmark",style="margin-bottom: 10px;")}}
+         </div>
+        
+      
+      </div>
+      </div>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <div class="row">
+      <div class="col-4" >
+      </div>
+      <div class="col-6">
+      
+      <div class="form group">
+        {{ form.hidden_tag() }}
+        {{ form.submit(class="btn btn-primary mb-3")}}
+       {{ form.clear(class="btn btn-danger mb-3")}}
+      
+      
+       
+       
+          
+      </div>
+      
+      </form>
+      </div>
+      </div>
+      </main>   
+      <hr>
+      
+
+
+
+   
+
+
+{% endblock body %}

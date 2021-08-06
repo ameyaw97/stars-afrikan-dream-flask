@@ -1,0 +1,71 @@
+{% extends 'index.html' %}
+{% block body %}
+
+<style>
+    #bg{
+      background-image: url('{{url_for('static',filename='assets/estella2.jpg')}}');
+      background-repeat:no-repeat;
+     background-size:100%;
+    background-position:center left;
+    }
+     </style>
+      
+    <div class="container-fluid">
+        <div id="bg" class="p-4 p-md-5 mb-4 text-center text-white rounded ">
+            
+              <h1 class="display-5 fst-italic">About Us </h1>
+              <p class="lead  my-3"> <h6 class="text-justify ">Epic things start with small humble steps. Pay respect to your beginnings. And if you're just starting out, know that it's OK to be sucky. To be small. To be messy and chaotic. Just make sure to never ever stop dreaming.</h6>
+                <small> Vishen Lakhiani </small></p>
+          </div>
+         
+    </div>
+    <h3 class="text-center border">  Stars Afrikan Dream LTD</h3>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8"><img src="{{url_for('static',filename='assets/Africandream.jpg')}}"  width="100%" height="225" class=" rounded featurette-image img-fluid mx-auto" alt="featurette">
+            <p style="text-align: justify; margin-top:10px ;">
+                
+                Stars Afrikan Dream Limited  is a registered company which has established Afrikan Dream School of Fashion 
+                and Fashion Centre in Manso Agroyesum in the Amansie South District. The School of 
+                Fashion and Fashion Centre was launched on 29 November, 2020.
+                The school has hired a fashion designer who trains interested people in the community in 
+                fashion and has accepted thirteens (13) students from the town who are currently training to 
+                become fashion designers without any tuition or admission fee. 
+                At the end of every course, which lasts for two (2) years, three (3) needy but passionate people 
+                from the community will be accepted into the school without having to pay any tuition or
+                admission fees.
+                The Afrikan Dream School of Fashion and Fashion Centre will train and equip the youth of 
+                Manso Agroyesum with skills to work with for their personal development and the development 
+                of the community.
+            </p>
+            <h3 class="text-center border ">  Stars Afrikan Dream Team</h3>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-4 border-bottom"><img src="{{url_for('static',filename='assets/estellaobeng.jpg')}}"  width="85%" height="90%" class="rounded  mx-auto" alt="featurette"></div>
+                <div class="col-md-4 border-bottom ">  <p><h4 class="text-center"> Miss Estella Obeng</h4></p>
+                    <p><h6 class="text-center">CEO</h6></p>
+                   
+                </div>
+                <div class="col-md-2"></div>
+
+                <div class="row">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-4 m-4 "><img src="{{url_for('static',filename='assets/madam.jpg')}}"  width="85%" height="85%" class="rounded  mx-auto" alt="featurette"></div>
+                    <div class="col-md-4  ">  <p><h4 class="text-center">Madam Adwoa Manu</h4></p>
+                        <p><h6 class="text-center">Fashion Designer</h6></p>
+                       
+                    </div>
+                    <div class="col-md-2"></div>
+
+            </div>
+
+        </div>
+
+    </div>
+    
+{% endblock body %}

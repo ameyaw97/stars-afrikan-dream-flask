@@ -1,0 +1,1 @@
+web: gunicorn estella_app:app

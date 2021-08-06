@@ -1,1 +1,1 @@
-web: gunicorn estella_app:app
+web: gunicorn estella_flask:app

@@ -55,7 +55,7 @@ def enroll():
         #db.session.commit()
        flash(f'Welcome {form.fullname.data} your application has been received you will hear from us', 'success') 
 
-       return render_template('enroll.html',form=form)
+       return redirect( url_for('enroll'))
 
    elif form.clear.data :
         return redirect(url_for('enroll'))

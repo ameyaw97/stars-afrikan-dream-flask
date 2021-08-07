@@ -1,5 +1,5 @@
 from flask_wtf import FlaskForm,Form
-from wtforms import StringField,PasswordField,SubmitField,BooleanField,SelectField,IntegerField
+from wtforms import StringField,PasswordField,SubmitField,BooleanField,SelectField,IntegerField,DateField 
 from wtforms.validators import DataRequired,Email,Length,ValidationError
 
 class registration(FlaskForm):
@@ -22,22 +22,16 @@ class registration(FlaskForm):
 class Enroll(FlaskForm):
     fullname= StringField('Full Name',validators= [DataRequired()] )
     gender = SelectField('Gender',choices=[('female', 'female'),('male', 'male')])
+    dob= DateField('Date of Birth', format='%d/%m/%Y',validators= [DataRequired()]) 
     age= IntegerField('Age',validators= [DataRequired()])
     number= IntegerField('Phone Number',validators= [DataRequired()])
     email = StringField('Email',validators= [Email(),DataRequired()])
     location= StringField('Location',validators= [DataRequired()])
     digital= StringField('Digital Address',validators= [DataRequired()])
     landmark= StringField('Landmark',validators= [DataRequired()])
-    guard = StringField('Guardien',validators= [DataRequired()])
-    emergencyname= StringField('Emergency Person',validators= [DataRequired()])
+    guard = StringField('Guardian',validators= [DataRequired()])
+    guardnum= StringField('Guardians contact',validators= [DataRequired()])
     #Emergency
-    location= StringField('Location',validators= [DataRequired()])
-    emergencynumber= IntegerField('Persons Active Phone Number',validators= [DataRequired()])
-    location= StringField('Location',validators= [DataRequired()])
-    
-    
-    
-    
     
     submit = SubmitField('Enroll')
     clear = SubmitField('Clear')

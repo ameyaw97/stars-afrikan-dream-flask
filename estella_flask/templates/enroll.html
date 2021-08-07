@@ -20,7 +20,7 @@
             <form method="POST">
            <div class="form group p-auto">
              {{ form.hidden_tag() }}
-             {{ form.fullname(class="form-control",placeholder="Enter your number in cm" ,id="newnumber",style="margin-bottom: 10px;")}}
+             {{ form.fullname(class="form-control",placeholder="Enter your full name" ,id="newnumber",style="margin-bottom: 10px;")}}
            </div>
           
         
@@ -46,6 +46,35 @@
         </div>
         
       </div>
+
+
+
+
+      <div class="row">
+        <div class="col-4" >
+       {{form.dob.label }}
+        </div>
+        <div class="col-6">
+        
+           <div class="form group p-auto">
+             {{ form.hidden_tag() }}
+             {% if form.dob.errors %}
+                            {{form.dob(class="form-control is-invalid")}}
+                          <div class=" invalid-feedback">
+                          {% for error in form.dob.errors %}
+                          <span>
+                            {{error}}
+                          </span>
+                          {% endfor %}
+                          </div>
+                          {% else %}
+                          {{ form.dob(class="form-control",id="newage",placeholder="format should be in the form day/month/Year",style="margin-bottom: 10px;")}}
+           {% endif %}
+          </div> 
+        </div>
+        
+       </div>
+
       
       <div class="row">
        <div class="col-4" >
@@ -123,7 +152,7 @@
       
          <div class="form group p-auto">
            {{ form.hidden_tag() }}
-           {{ form.digital(class="form-control", id="newdigital",placeholder="Enter your digital",style="margin-bottom: 10px;")}}
+           {{ form.digital(class="form-control", id="newdigital",placeholder="Enter your digital address",style="margin-bottom: 10px;")}}
          </div>
         
       
@@ -156,8 +185,66 @@
       
       
       
-      
-      
+      <div class="row">
+        <div class="col-4" >
+       {{form.guard.label }}
+        </div>
+        <div class="col-6">
+        
+           <div class="form group p-auto">
+             {{ form.hidden_tag() }}
+             {% if form.guard.errors %}
+                            {{form.guard(class="form-control is-invalid")}}
+                          <div class=" invalid-feedback">
+                          {% for error in form.guard.errors %}
+                          <span>
+                            {{error}}
+                          </span>
+                          {% endfor %}
+                          </div>
+                          {% else %}
+                          {{ form.guard(class="form-control",id="newage",placeholder="Enter your the name of your guardian ",style="margin-bottom: 10px;")}}
+           {% endif %}
+          </div> 
+        </div>
+        
+       </div>
+
+
+
+
+
+
+
+       <div class="row">
+        <div class="col-4" >
+       {{form.guardnum.label }}
+        </div>
+        <div class="col-6">
+        
+           <div class="form group p-auto">
+             {{ form.hidden_tag() }}
+             {% if form.guardnum.errors %}
+                            {{form.guardnum(class="form-control is-invalid")}}
+                          <div class=" invalid-feedback">
+                          {% for error in form.guardnum.errors %}
+                          <span>
+                            {{error}}
+                          </span>
+                          {% endfor %}
+                          </div>
+                          {% else %}
+                          {{ form.guardnum(class="form-control",id="newage",placeholder="Enter your Guardians number ",style="margin-bottom: 10px;")}}
+           {% endif %}
+          </div> 
+        </div>
+        
+       </div>
+
+
+
+     
+       
       
       <div class="row">
       <div class="col-4" >
